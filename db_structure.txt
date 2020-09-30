@@ -1,0 +1,23 @@
+1. News
+image
+title
+date
+description
+
+2. Team
+image
+fname
+lname
+position
+number
+description
+
+3. Match
+image1
+team_name1
+team_country1
+game_result
+image2
+team_name2
+team_country2
+
