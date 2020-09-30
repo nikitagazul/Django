@@ -4,7 +4,7 @@ title
 date
 description
 
-2. Team
+2. Player
 image
 fname
 lname
