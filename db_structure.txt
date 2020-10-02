@@ -3,6 +3,7 @@ image
 title
 date
 description
+url
 
 2. Player
 image
