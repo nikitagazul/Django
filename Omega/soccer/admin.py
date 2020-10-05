@@ -1,7 +1,16 @@
+from django import forms
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
 from .models import News, Player, Match
+
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
+class PlayerAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+    class Meta:
+        model = Player
+        fields = '__all__'
 
 @admin.register(Player)
 class PlayerAdmin(admin.ModelAdmin):
@@ -9,6 +18,7 @@ class PlayerAdmin(admin.ModelAdmin):
     list_display_links = ("fname", "lname", "number",)
     search_fields = ("fname", "lname",)
     readonly_fields = ("get_image",)
+    form = PlayerAdminForm
 
     def get_image(self, obj):
         return mark_safe(f'<img src={obj.image.url} class="img-fluid" width="96" height="128"')
