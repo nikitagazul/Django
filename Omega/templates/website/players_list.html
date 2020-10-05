@@ -39,7 +39,7 @@
                                                     <div class="col-6"><h5>Date of Birth</h5><p>{{ player.birth }}</p></div>
                                                 </div>
                                                 <div>
-                                                    <p class="text-justify">{{ player.description }}</p>
+                                                    <p class="text-justify">{{ player.description|safe }}</p>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
