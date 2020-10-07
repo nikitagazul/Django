@@ -17,15 +17,16 @@
                         <div class="col-md-12">
                             <h2 class="text-uppercase font-weight-bold mb-3" style="font-size: 1rem;">Latest Matches</h2>
                             <div class="row align-items-center ml-0 mr-0 py-4 animation-matches" style="border-bottom: 1px solid #D3D3D3;">
+                                {% for match in matches_list %}
                                 <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
                                     <div class="text-center text-lg-left">
                                         <div class="d-block d-lg-flex align-items-center">
                                             <div class="image-index mb-3 mb-lg-0 mr-lg-3">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index rounded-circle" >
+                                                <img src="{{ match.image1.url }}" alt="{{ match.team_name1 }}" class="img-fluid image-small-index rounded-circle" >
                                             </div>
                                             <div>
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
+                                                <h3 class="mb-0" style="font-size: 1.2em;">{{ match.team_name1 }}</h3>
+                                                <span class="text-uppercase small-index">{{ match.team_country1 }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -33,7 +34,7 @@
                                 <div class="col-md-4 col-lg-4 mb-4 mb-lg-0 text-center">
                                     <div class="d-inline-block">
                                         <div class="py-2 px-4 mb-2 d-inline-block rounded" style="background-color: black;">
-                                            <span style="font-size: 1.25em; color: white;">5:5</span>
+                                            <span style="font-size: 1.25em; color: white;">{{ match.score1 }}:{{ match.score2 }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -41,88 +42,17 @@
                                     <div>
                                         <div class="d-block d-lg-flex align-items-center">
                                             <div class="image-index mb-3 mb-lg-0 ml-lg-3 order-2">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index-2 rounded-circle" >
+                                                <img src="{{ match.image2.url }}" alt="{{ match.team_name2 }}" class="image-small-index-2 rounded-circle" >
                                             </div>
                                             <div class="order-1 w-100">
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
+                                                <h3 class="mb-0" style="font-size: 1.2em;">{{ match.team_name2}}</h3>
+                                                <span class="text-uppercase small-index">{{ match.team_country2 }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row align-items-center ml-0 mr-0 py-4 animation-matches" style="border-bottom: 1px solid #D3D3D3;">
-                                <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
-                                    <div class="text-center text-lg-left">
-                                        <div class="d-block d-lg-flex align-items-center">
-                                            <div class="image-index mb-3 mb-lg-0 mr-lg-3">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index rounded-circle" >
-                                            </div>
-                                            <div>
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 mb-4 mb-lg-0 text-center">
-                                    <div class="d-inline-block">
-                                        <div class="py-2 px-4 mb-2 d-inline-block rounded" style="background-color: black;">
-                                            <span style="font-size: 1.25em; color: white;">5:5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 text-center text-lg-right">
-                                    <div>
-                                        <div class="d-block d-lg-flex align-items-center">
-                                            <div class="image-index mb-3 mb-lg-0 ml-lg-3 order-2">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index-2 rounded-circle" >
-                                            </div>
-                                            <div class="order-1 w-100">
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row align-items-center ml-0 mr-0 py-4 animation-matches" style="border-bottom: 1px solid #D3D3D3;">
-                                <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
-                                    <div class="text-center text-lg-left">
-                                        <div class="d-block d-lg-flex align-items-center">
-                                            <div class="image-index mb-3 mb-lg-0 mr-lg-3">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index rounded-circle" >
-                                            </div>
-                                            <div>
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 mb-4 mb-lg-0 text-center">
-                                    <div class="d-inline-block">
-                                        <div class="py-2 px-4 mb-2 d-inline-block rounded" style="background-color: black;">
-                                            <span style="font-size: 1.25em; color: white;">5:5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 text-center text-lg-right">
-                                    <div>
-                                        <div class="d-block d-lg-flex align-items-center">
-                                            <div class="image-index mb-3 mb-lg-0 ml-lg-3 order-2">
-                                                <img src="../../static/images/group.jpg" alt="Image" class="img-fluid image-small-index-2 rounded-circle" >
-                                            </div>
-                                            <div class="order-1 w-100">
-                                                <h3 class="mb-0" style="font-size: 1.2em;">Omega Three</h3>
-                                                <span class="text-uppercase small-index">Ukraine</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
