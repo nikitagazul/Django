@@ -309,5 +309,14 @@ footer{
 
 /*index*/
 @media screen and (max-width: 992px){
-
+  .parallax-index{
+    background-image: none;
+    height: auto;
+  }
+  .parallax-index .container .row{
+    height: auto;
+  }
+  .parallax-index .container .row .col-md-6 .post-index{
+    border: 1px solid #eee;
+  }
 }
