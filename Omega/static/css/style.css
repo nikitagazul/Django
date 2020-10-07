@@ -42,7 +42,7 @@ li.nav-item a.nav-link:hover{
 }
 
 .img1{
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/images/group.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../images/group.jpg);
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@ li.nav-item a.nav-link:hover{
   background-position: top;
 }
 .img2{
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/images/one.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../images/one.jpg);
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ li.nav-item a.nav-link:hover{
   background-position: top;
 }
 .img3{
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/images/two.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../images/two.jpg);
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ li.nav-item a.nav-link:hover{
 }
 
 .parallax{
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/images/group.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../images/group.jpg);
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -223,7 +223,7 @@ a.text-danger:hover{
 }
 
 .parallax-index{
-  background: linear-gradient( rgba(255, 152, 65, 0.8), rgba(255, 152, 65, 0.8) ), url(/images/group.jpg);
+  background: linear-gradient( rgba(255, 152, 65, 0.8), rgba(255, 152, 65, 0.8) ), url(../images/group.jpg);
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;

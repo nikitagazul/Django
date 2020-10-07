@@ -41,19 +41,19 @@
 
             <nav class="navbar navbar-expand-lg navbar-dark position-relative bg-black pt-2 pb-2 fixed-top text-right">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html" style="position: absolute;"><img src="{% static 'images/logo.png'%}" class="rounded" alt="logo"/></a>
+                    <a class="navbar-brand" href="" style="position: absolute;"><img src="{% static 'images/logo.png'%}" class="rounded" alt="logo"/></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto pt-2 text-right">
-                            <li class="nav-item active"><a class="nav-link mr-1 text-white" href="index.html" style="font-size: 15px;">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="news_list.html" style="font-size: 15px;">News</a></li>
-                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="matches_list.html" style="font-size: 15px;">Matches</a></li>
-                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="players_list.html" style="font-size: 15px;">Team</a></li>
-                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="about.html" style="font-size: 15px;">About</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="contact.html" style="font-size: 15px;">Contact</a></li>
+                            <li class="nav-item active"><a class="nav-link mr-1 text-white" href="{% url 'home' %}" style="font-size: 15px;">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="{% url 'news' %}" style="font-size: 15px;">News</a></li>
+                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="{% url 'matches' %}" style="font-size: 15px;">Matches</a></li>
+                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="{% url 'players' %}" style="font-size: 15px;">Team</a></li>
+                            <li class="nav-item"><a class="nav-link mr-1 text-white" href="{% url 'about' %}" style="font-size: 15px;">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="{% url 'contact' %}" style="font-size: 15px;">Contact</a></li>
                         </ul>
                     </div>
                 </div>

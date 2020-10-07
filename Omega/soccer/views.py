@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView
-from django.views.generic.base import View
+from django.views.generic import ListView, TemplateView
 
-from .models import Player
+from .models import Player, Match, News
 
 
 class PlayersView(ListView):
@@ -16,3 +15,24 @@ class PlayersView(ListView):
   #      player = Player.objects.get(id=pk)
    #     return render(request, "players/players_list.html", {"players_list": player})
 # Create your views here.
+
+class MatchesView(ListView):
+    model = Match
+    context_object_name = 'matches_list'
+    queryset = Match.objects.all()
+    template_name = "website/matches_list.html"
+
+class NewsView(ListView):
+    model = News
+    context_object_name = 'news_list'
+    queryset = News.objects.all()
+    template_name = "website/news_list.html"
+
+class IndexView(TemplateView):
+    template_name = "website/index.html"
+
+class ContactView(TemplateView):
+    template_name = "website/contact.html"
+
+class AboutView(TemplateView):
+    template_name = "website/about.html"
