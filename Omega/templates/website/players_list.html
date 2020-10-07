@@ -22,7 +22,9 @@
                         {% for player in players_list %}
                         <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-3 text-center">
                             <div class="player mb-5">
-                                <span class="team-number align-items-center">{{ player.number }}</span>
+                                {% if player.number != null %}
+                                    <span class="team-number align-items-center">{{ player.number }}</span>
+                                {% endif %}
                                 <img src="{{ player.image.url }}" style="cursor: pointer;" alt="{{ player.fname }} {{ player.lname }}" class="img-fluid image rounded-circle mb-4" data-toggle="modal" data-target="#exampleModalCenter">
                                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">

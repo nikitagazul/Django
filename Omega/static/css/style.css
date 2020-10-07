@@ -212,6 +212,7 @@ a.text-danger:hover{
 .image-small-index-2{
   object-fit: cover;
   height: 100px;
+  width: 100px;
   overflow: hidden;
   position: relative;
 }
