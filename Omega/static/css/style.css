@@ -265,6 +265,17 @@ footer{
   background-color: rgba(255, 203, 65)!important;
 }
 
+/*pagination*/
+.page-item.active .page-link{
+  background-color: rgb(255, 152, 65) !important;
+  border: rgb(255, 152, 65) !important;
+  color: black!important;
+  font-weight: bold;
+}
+.page-link{
+  color: black!important;
+}
+
 /*media*/
 /*nav*/
 @media screen and (max-width: 768px){

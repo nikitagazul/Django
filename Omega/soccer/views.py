@@ -19,14 +19,16 @@ class PlayersView(ListView):
 class MatchesView(ListView):
     model = Match
     context_object_name = 'matches_list'
-    queryset = Match.objects.all()
+    queryset = Match.objects.all().order_by('-id')
     template_name = "website/matches_list.html"
+    paginate_by = 6
 
 class NewsView(ListView):
     model = News
     context_object_name = 'news_list'
-    queryset = News.objects.all()
+    queryset = News.objects.all().order_by('-id')
     template_name = "website/news_list.html"
+    paginate_by = 6
 
 class IndexView(TemplateView):
     template_name = "website/index.html"
