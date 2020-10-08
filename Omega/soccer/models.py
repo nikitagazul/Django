@@ -9,7 +9,7 @@ class News(models.Model):
     description = models.TextField(verbose_name="Описание")
 
     class Meta:
-        verbose_name = 'Новости'
+        verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
 
 class Player(models.Model):
@@ -27,7 +27,7 @@ class Player(models.Model):
         return self.lname;
 
     class Meta:
-        verbose_name = 'Игрок'
+        verbose_name = 'Игрока'
         verbose_name_plural = 'Игроки'
 
 class Match(models.Model):
@@ -35,8 +35,8 @@ class Match(models.Model):
     image1 = models.ImageField(verbose_name="Фото первой команды", upload_to="match/")
     team_name1 = models.CharField(verbose_name="Название первой команды", max_length=30)
     team_country1 = models.CharField(verbose_name="Страна первой команды", max_length=20)
-    score1 = models.IntegerField(verbose_name="Голов первой")
-    score2 = models.IntegerField(verbose_name="Голово второй")
+    score1 = models.IntegerField(verbose_name="Голов первой", null=True, blank=True)
+    score2 = models.IntegerField(verbose_name="Голов второй", null=True, blank=True)
     image2 = models.ImageField(verbose_name="Фото второй", upload_to="match/")
     team_name2 = models.CharField(verbose_name="Название второй команды", max_length=30)
     team_country2 = models.CharField(verbose_name="Страна второй команды", max_length=20)
@@ -50,5 +50,5 @@ class Match(models.Model):
         return self.score2;
 
     class Meta:
-        verbose_name = 'Игра'
+        verbose_name = 'Игру'
         verbose_name_plural = 'Игры'
