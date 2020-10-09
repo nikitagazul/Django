@@ -1,0 +1,41 @@
+{% for one in view.get_matches %}
+    <div class="row align-items-center ml-0 mr-0 py-4 animation-index" style="border-bottom: 1px solid #D3D3D3; background-color: white;" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="700">
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0">
+            <div class="text-center text-lg-left">
+                <div class="d-block d-lg-flex align-items-center">
+                    <div class="image-index mb-3 mb-lg-0 mr-lg-3">
+                        <img src="{{ one.image1.url }}" class="img-fluid image-small-index rounded-circle" alt="{{ one.team_name1 }}" >
+                    </div>
+                    <div>
+                        <h3 class="mb-0" style="font-size: 1.2em;">{{ one.team_name1 }}</h3>
+                        <span class="text-uppercase small-index">{{ one.team_country1 }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-lg-0 text-center">
+            <div class="d-inline-block">
+                <div class="py-2 px-4 mb-2 d-inline-block rounded" style="background-color: black;">
+                    {% if one.score1 != null and one.score2 != null %}
+                        <span style="font-size: 1.25em; color: white;">{{ one.score1 }}:{{ one.score2 }}</span>
+                    {% else %}
+                        <span style="font-size: 1.25em; color: white;">Upcoming</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 text-center text-lg-right">
+            <div>
+                <div class="d-block d-lg-flex align-items-center">
+                    <div class="image-index mb-3 mb-lg-0 ml-lg-3 order-2">
+                        <img src="{{ one.image2.url }}" class="image-small-index-2 rounded-circle" alt="{{ one.team_name2 }}">
+                    </div>
+                    <div class="order-1 w-100">
+                        <h3 class="mb-0" style="font-size: 1.2em;">{{ one.team_name2 }}</h3>
+                        <span class="text-uppercase small-index">{{ one.team_country2 }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

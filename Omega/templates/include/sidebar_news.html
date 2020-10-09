@@ -1,0 +1,14 @@
+{% for news in view.get_news %}
+    <div class="row my-5" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="700">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="image">
+                <img src="{{  news.image.url }}" class="img-fluid" alt="{{ news.title }} " />
+            </div>
+            <div class="text p-4 bg-white">
+                <h2 style="font-size: 1.25rem;">{{ news.title }} </h2>
+                <span class="text-uppercase date d-block mb-3"><small>• {{ news.date }}</small></span>
+                <p class="mb-0" style="color: #4d4d4d;">{{ news.description }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}

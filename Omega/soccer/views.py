@@ -30,7 +30,14 @@ class NewsView(ListView):
     template_name = "website/news_list.html"
     paginate_by = 6
 
-class IndexView(TemplateView):
+class Sidebars:
+    def get_matches(self):
+        return Match.objects.all().order_by('-id')[:3]
+
+    def get_news(self):
+        return News.objects.all().order_by('-id')[:3]
+
+class IndexView(Sidebars, TemplateView):
     template_name = "website/index.html"
 
 class ContactView(TemplateView):
@@ -38,3 +45,4 @@ class ContactView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "website/about.html"
+
