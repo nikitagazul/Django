@@ -6,7 +6,7 @@ class News(models.Model):
     image = models.ImageField(verbose_name="Фото", upload_to="news/")
     title = models.CharField(verbose_name="Название", max_length=30)
     date = models.DateField(verbose_name="Дата")
-    description = models.TextField(verbose_name="Описание")
+    description = models.TextField(verbose_name="Описание", max_length=265)
 
     class Meta:
         verbose_name = 'Новость'

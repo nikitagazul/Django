@@ -24,7 +24,7 @@
                     <div class="d-inline-block">
                       <a href="#" class="text-secondary p-2 d-flex align-items-center text-decoration-none">
                         <i class="fa fa-envelope mr-3" style="font-size:1.1rem"></i>
-                        <span class="email-top">my_email@gmail.com</span>
+                        <span class="email-top">sergejdokienko@gmail.com</span>
                       </a>
                     </div>
                     <div class="d-inline-block">
@@ -53,22 +53,22 @@
                         {% with request.resolver_match.url_name as url_name %}
                         <ul class="navbar-nav ml-auto pt-2 text-right">
                             <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
-                                <a class="nav-link mr-1 text-white" href="{% url 'home' %}" style="font-size: 15px;">Home</a>
+                                <a class="nav-link mr-1 text-white" href="{% url 'home' %}" style="font-size: 15px;">Главная</a>
                             </li>
                             <li class="nav-item {% if url_name == 'news' %}active{% endif %}">
-                                <a class="nav-link mr-1 text-white" href="{% url 'news' %}" style="font-size: 15px;">News</a>
+                                <a class="nav-link mr-1 text-white" href="{% url 'news' %}" style="font-size: 15px;">Новости</a>
                             </li>
                             <li class="nav-item {% if url_name == 'matches' %}active{% endif %}">
-                                <a class="nav-link mr-1 text-white" href="{% url 'matches' %}" style="font-size: 15px;">Matches</a>
+                                <a class="nav-link mr-1 text-white" href="{% url 'matches' %}" style="font-size: 15px;">Игры</a>
                             </li>
                             <li class="nav-item {% if url_name == 'players' %}active{% endif %}">
-                                <a class="nav-link mr-1 text-white" href="{% url 'players' %}" style="font-size: 15px;">Team</a>
+                                <a class="nav-link mr-1 text-white" href="{% url 'players' %}" style="font-size: 15px;">Команда</a>
                             </li>
-                            <li class="nav-item {% if url_name == 'about' %}active{% endif %}">
-                                <a class="nav-link mr-1 text-white" href="{% url 'about' %}" style="font-size: 15px;">About</a>
+                            <li class="nav-item{% if url_name == 'about' %}active{% endif %}">
+                                <a class="nav-link mr-1 text-white" href="{% url 'about' %}" style="font-size: 15px;">Омега</a>
                             </li>
                             <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
-                                <a class="nav-link text-white" href="{% url 'contact' %}" style="font-size: 15px;">Contact</a>
+                                <a class="nav-link text-white" href="{% url 'contact' %}" style="font-size: 15px;">Контакты</a>
                             </li>
                         </ul>
                         {% endwith %}

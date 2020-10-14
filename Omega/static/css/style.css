@@ -225,7 +225,7 @@ a.text-danger:hover{
 
 .parallax-index{
   background: linear-gradient( rgba(255, 152, 65, 0.8), rgba(255, 152, 65, 0.8) ), url(../images/group.jpg);
-  height: 650px;
+  height: 850px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
