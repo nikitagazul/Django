@@ -12,11 +12,19 @@
                 </div>
 
             </div>
+
+            {% if fname %}
+            <center class="pt-3">
+                <h2>Thanks {{ fname }} {{ lname }}!</h2>
+                <p>We received your email and will respond shortly.</p>
+            </center>
+            {% else %}
             <div class="bg-light" style="padding: 5em 0;">
                 <div class="container">
                     <div class="row align-items-first">
                         <div class="col-md-7">
-                            <form action="#" method="post" style="background-color: #fff;">
+                            <form action="{% url 'contact' %}" method="post" style="background-color: #fff;">
+                                {% csrf_token %}
                                 <div class="p-3 p-lg-5 border">
                                     <div class="form-group row">
                                         <div class="col-md-6">
@@ -59,13 +67,14 @@
                                 <p class="mb-0">Адресс</p>
                                 <p class="mb-4">Одесса, Украина</p>
                                 <p class="mb-0">Телефон</p>
-                                <p class="mb-4"><a href="#" class="text-danger">+1 012 345 6789</a></p>
+                                <p class="mb-4"><a href="tel:+380667686677" class="text-danger">+38 066 768 6677</a></p>
                                 <p class="mb-0">Email</p>
-                                <p class="mb-4"><a href="#" class="text-danger">sergejdokienko@gmail.com</a></p>
+                                <p class="mb-4"><a href="mailto:sergejdokienko@gmail.com" class="text-danger">sergejdokienko@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endif %}
 {% endblock content %}
 
