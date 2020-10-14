@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
+from django.core.mail import send_mail
 
 from .models import Player, Match, News
 
@@ -40,8 +41,17 @@ class Sidebars:
 class IndexView(Sidebars, TemplateView):
     template_name = "website/index.html"
 
-class ContactView(TemplateView):
-    template_name = "website/contact.html"
+def contact(request):
+    if request.method == "POST":
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        send_mail(subject, message, email, ['nikitagazul@gmail.com'])
+        return render(request, 'website/contact.html', {'fname': fname, 'lname':lname})
+    else:
+        return render(request, 'website/contact.html', {})
 
 class AboutView(TemplateView):
     template_name = "website/about.html"
